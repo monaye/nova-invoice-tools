@@ -1,9 +1,19 @@
 Nova.booting((Vue, router, store) => {
   router.addRoutes([
     {
-      name: 'nova-invoice-tools',
-      path: '/nova-invoice-tools',
-      component: require('./components/Tool'),
+      name: 'invoices-index',
+      path: '/invoices',
+      component: require('./views/Index'),
     },
+    {
+        name: 'invoices-detail',
+        path: '/invoices/:invoiceId',
+        component: require('./views/Detail'),
+      },
+      {
+        name: 'invoices-new',
+        path: '/invoices/new',
+        component: require('./views/New'),
+      },
   ])
 })
